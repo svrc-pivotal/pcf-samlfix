@@ -20,6 +20,7 @@ sed -i 's/default: SHA1/default: SHA256/' tmp/metadata/cf.yml
 sed -i 's/service_provider_key_credentials\.private_key_pem/\.properties\.networking_point_of_entry\.haproxy\.ssl_rsa_certificate\.private_key_pem/' 
 
 tmp/metadata/cf.yml
+sed -i 's/entityid: "http:/entityid: "https:/' tmp/metadata/cf.yml
 sed -i 's/service_provider_key_credentials\.cert_pem/\.properties\.networking_point_of_entry\.haproxy\.ssl_rsa_certificate\.cert_pem/' tmp/metadata/cf.yml
 pushd tmp
   zip -r ../$DEST *
